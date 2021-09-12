@@ -1,0 +1,11 @@
+p7: main.o Deck.o
+        g++ -o p7 main.o Deck.o
+
+main.o: main.cpp Deck.h
+        g++ -c -g -Wall -Wextra -Wpedantic main.cpp
+
+Deck.o: Deck.h Deck.cpp
+        g++ -c -g -Wall -Wextra -Wpedantic Deck.cpp
+
+clean:
+        rm -f p7 *.o *~
